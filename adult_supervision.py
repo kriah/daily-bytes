@@ -22,7 +22,14 @@ matrix = [
   [1, 0, 0],
   [0, 0, 0]
 ]
-k = 3,
+k = 3
 
-for row in matrix:
-    print(row)
+
+count = 0
+for row in range(0, len(matrix)):
+    count = 0
+    print("Row:", row)
+    for item in matrix[row]:
+      if item == 1:
+        count += 1
+    print(count)
