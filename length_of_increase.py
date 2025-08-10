@@ -9,15 +9,22 @@ Ex: Given the following nums.
 nums = [3, 4, 1, 2, 8], return 3.
 '''
 
-nums = [3, 4, 5, 2, 8] #[1, 2, 3, 4, 8]
-nums = [1, 2, 6, 7, 8]
+nums = [1, 2, 3]
+nums1 = [3, 4, 1, 2, 8]
+nums2 = [3, 4, 5, 2, 8]
 
 def increasing_interval(nums):
-    nums.sort()
+    count = 1
+    currCount = 0
 
-    count = 0
+    for i in range(len(nums)-1):
+        if (nums[i] < nums[i+1]):
+            count += 1
+        else:
+            if (count > currCount): 
+                currCount = count
+            count = 1
 
-    print(nums)
+    return currCount
 
-
-increasing_interval(nums)
+print("Count:", increasing_interval(nums2))
