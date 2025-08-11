@@ -19,8 +19,8 @@ B = [2, 5, 1, 3, 4, 9]
 def anagram_mapping(A, B):
     indexes = []
     for item in A:
-        indexValue = B.index(item)
-        indexes.append(indexValue)
+        index_value = B.index(item)
+        indexes.append(index_value)
 
     return indexes
 

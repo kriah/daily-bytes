@@ -13,8 +13,8 @@ candies = 3, exchange = 4, return 3.
 candies = 6
 exchange = 3
 
-def candyExchange(candies, exchangeRate):
+def candy_exchange(candies, exchangeRate):
     return candies + candies//exchangeRate
 
 
-print(candyExchange(candies, exchange))
+print(candy_exchange(candies, exchange))

@@ -15,16 +15,16 @@ nums2 = [3, 4, 5, 2, 8]
 
 def increasing_interval(nums):
     count = 1
-    currCount = 0
+    current_count = 0
 
     for i in range(len(nums)-1):
         if (nums[i] < nums[i+1]):
             count += 1
         else:
-            if (count > currCount): 
-                currCount = count
+            if (count > current_count): 
+                current_count = count
             count = 1
 
-    return currCount
+    return current_count
 
 print("Count:", increasing_interval(nums2))
