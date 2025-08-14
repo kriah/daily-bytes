@@ -16,7 +16,13 @@ def remove_duplicates(s):
     index = 0
     new_string = ""
 
-    
-    return new_string
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            s1 = s[:i] + s[i+2:]
+            print("s1:", s1)
+            remove_duplicates(s1)
+        else:
+            continue 
 
-print(remove_duplicates(s1))
+
+print(remove_duplicates(s2))
