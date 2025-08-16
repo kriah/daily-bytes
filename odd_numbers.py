@@ -11,10 +11,11 @@ low = 1, high = 10, return 5.
 
 low = 1
 high = 10
-sum = 0
+count = 0
 
+# Iterate through range to find all odd numbers
 for num in range(low, high+1):
   if num%2 == 1:
-    sum += 1
+    count += 1
 
-print("There are", sum, "odd numbers between", low, "and", high, ".")
+print("There are", count, "odd numbers between", low, "and", high, ".")
