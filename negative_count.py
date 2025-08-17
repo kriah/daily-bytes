@@ -21,6 +21,8 @@ matrix = [
 ]
 
 sum = 0
+
+# Iterate through matrix to find negative numbers
 for row in matrix:
   for item in row:
     if item < 0:

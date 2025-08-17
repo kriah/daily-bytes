@@ -18,9 +18,12 @@ B = [2, 5, 1, 3, 4, 9]
 
 def anagram_mapping(A, B):
     indexes = []
+    # iterate through all items in array A
     for item in A:
+        # finds the index of item in array B
         index_value = B.index(item)
-        indexes.append(index_value)
+        # add index to new list
+        indexes.append(index_value) 
 
     return indexes
 
