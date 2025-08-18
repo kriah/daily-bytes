@@ -12,7 +12,7 @@ nums = [3, 4, 1, 2, 8], return 3.
 nums = [1, 2, 3] #returns 3
 nums1 = [3, 4, 1, 2, 8] # returns 3
 nums2 = [3, 4, 5, 2, 8] # returns 3
-nums3 = [5, 4, 3, 2, 1]
+nums3 = [5, 4, 3, 2, 1] # returns 1
 
 def increasing_interval(nums):
     count = 1
@@ -23,12 +23,10 @@ def increasing_interval(nums):
         # checks if the current item is less than the next item
         if (nums[i] < nums[i+1]):
             count += 1
-        
         else:
-            if (count > current_count): 
-                current_count = count
-            count = 1
+            count = 1 # reset count if next item is smaller
         
+        # assign the largest interval to current_count
         if (count > current_count): 
                 current_count = count
 
