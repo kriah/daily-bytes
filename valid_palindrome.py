@@ -13,18 +13,20 @@ str1 = "level"
 str2 = "algorithm"
 str3 = "A man, a plan, a canal: Panama."
 
-def is_palindrome(str1):
+
+def is_palindrome(str1): 
+    new_string = str1.lower()
+    txt = [',', ':', '.', " "]
+    for item in txt:
+        new_string = new_string.replace(item, "")
+
     reverse = -1
-    for i in range(len(str1)):
-        print('s:', str1[i], 't:', str1[reverse])
-        if not str1[i].isalpha():
-            print('Yes')
-        elif not str1[reverse].isalpha():
-            print('No')
-        elif str1[i] != str1[reverse]:
+    for i in range(len(new_string)):
+        if new_string[i] != new_string[reverse]:
             return False
         reverse -= 1
-
     return True
 
-print(is_palindrome(str3))
+print(is_palindrome(str1)) # True
+print(is_palindrome(str2)) # False  
+print(is_palindrome(str3)) # True 
