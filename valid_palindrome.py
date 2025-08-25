@@ -15,11 +15,13 @@ str3 = "A man, a plan, a canal: Panama."
 
 
 def is_palindrome(str1): 
+    # clean string from punctuation
     new_string = str1.lower()
     txt = [',', ':', '.', " "]
     for item in txt:
         new_string = new_string.replace(item, "")
 
+    # check if remaining string is a palindrome
     reverse = -1
     for i in range(len(new_string)):
         if new_string[i] != new_string[reverse]:
